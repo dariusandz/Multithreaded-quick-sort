@@ -1,9 +1,5 @@
-package com.mif;
-
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicInteger;
-
-import static com.mif.Main.forkJoinPool;
 
 public class Quicksorter<T extends Comparable<T>> implements Runnable {
 
@@ -49,22 +45,22 @@ public class Quicksorter<T extends Comparable<T>> implements Runnable {
             }
 
             int partitionIndex = partition(nLeft, nRight);
-            Logger.log(nthThread + " thread says: " + activeThreadCount.get() + "/" + forkJoinPool.getParallelism() + " active threads. Should I create more? " + !shouldNotPartitionIntoThreads());
+            Logger.log(nthThread + " thread says: " + activeThreadCount.get() + "/" + Main.forkJoinPool.getParallelism() + " active threads. Should I create more? " + !shouldNotPartitionIntoThreads());
             if (shouldNotPartitionIntoThreads()) {
                 sort(nLeft, partitionIndex - 1);
                 sort(partitionIndex + 1, nRight);
             } else {
                 Logger.log(nthThread + " thread partitioning into two new threads");
                 activeThreadCount.getAndAdd(2);
-                forkJoinPool.execute(new Quicksorter<>(data, nLeft, partitionIndex - 1, activeThreadCount, activeThreadCount.get() - 2 + 1));
-                forkJoinPool.execute(new Quicksorter<>(data, partitionIndex + 1, nRight, activeThreadCount, activeThreadCount.get() - 2 + 2));
+                Main.forkJoinPool.execute(new Quicksorter<>(data, nLeft, partitionIndex - 1, activeThreadCount, activeThreadCount.get() - 2 + 1));
+                Main.forkJoinPool.execute(new Quicksorter<>(data, partitionIndex + 1, nRight, activeThreadCount, activeThreadCount.get() - 2 + 2));
             }
         }
     }
 
     private boolean shouldNotPartitionIntoThreads() {
 //        synchronized (activeThreadCount) {
-        return activeThreadCount.get() + 2 > forkJoinPool.getParallelism();
+        return activeThreadCount.get() + 2 > Main.forkJoinPool.getParallelism();
 //        }
     }
 

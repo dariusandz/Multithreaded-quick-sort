@@ -1,5 +1,3 @@
-package com.mif;
-
 /** Simple system multithreading performance test.
  Version 1.3
  @author R.Vaicekauskas

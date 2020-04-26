@@ -1,5 +1,3 @@
-package com.mif;
-
 import java.util.Arrays;
 
 public class Logger {
