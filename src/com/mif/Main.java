@@ -12,16 +12,19 @@ public class Main {
 
     public static void main(String[] args) {
         if (args.length > 3) {
-            System.out.println("First argument should be number of threads, second - data sample size");
+            System.out.println("arg[0] - number of threads (1...n) \n arg[1] - data sample size (1...MAX_INT) \n arg[2] - silent mode (false, true)");
         }
 
         int nThreads = Integer.parseInt(args[0]);
         int bound = Integer.parseInt(args[1]);
+        boolean supervisor = args[2] != null ? Boolean.parseBoolean(args[2]) : false;
+        Logger.setSilent(supervisor);
+
         forkJoinPool = new ForkJoinPool(nThreads);
 
         final AtomicInteger activeThreadCount = new AtomicInteger(1);
         Integer[] arr = generateData(r -> r.nextInt(bound), Integer.class, bound);
-        forkJoinPool.execute(new Quicksorter<>(arr, 0, arr.length - 1, activeThreadCount));
+        forkJoinPool.execute(new Quicksorter<>(arr, 0, arr.length - 1, activeThreadCount, 1));
 
         try {
             synchronized (activeThreadCount) {
