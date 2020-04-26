@@ -1,0 +1,60 @@
+package com.mif;
+
+import java.lang.reflect.Array;
+import java.util.Random;
+import java.util.concurrent.ForkJoinPool;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.function.Function;
+
+public class Main {
+
+    public static ForkJoinPool forkJoinPool;
+
+    public static void main(String[] args) {
+        if (args.length > 3) {
+            System.out.println("First argument should be number of threads, second - data sample size");
+        }
+
+        int nThreads = Integer.parseInt(args[0]);
+        int bound = Integer.parseInt(args[1]);
+        forkJoinPool = new ForkJoinPool(nThreads);
+
+        final AtomicInteger activeThreadCount = new AtomicInteger(1);
+        Integer[] arr = generateData(r -> r.nextInt(bound), Integer.class, bound);
+        forkJoinPool.execute(new Quicksorter<>(arr, 0, arr.length - 1, activeThreadCount));
+
+        try {
+            synchronized (activeThreadCount) {
+                activeThreadCount.wait();
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        Boolean isSorted = isSorted(arr);
+        System.out.println("Is array sorted? : " + isSorted);
+    }
+
+    /** Generates an array of size n
+        @param generator function that generates a number
+        @param type array data type
+        @param n size of data
+        @return generated array
+     **/
+    private static <T> T[] generateData(Function<Random, T> generator, Class<T> type, int n) {
+        T[] arr = (T[]) Array.newInstance(type, n);
+        Random r = new Random();
+        for (int i = 0; i < n; i++)
+            arr[i] = generator.apply(r);
+        return arr;
+    }
+
+    private static <T extends Comparable<T>> boolean isSorted(T[] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            if (arr[i].compareTo(arr[i + 1]) > 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
