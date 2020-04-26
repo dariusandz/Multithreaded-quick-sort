@@ -17,8 +17,8 @@ public class Main {
 
         int nThreads = Integer.parseInt(args[0]);
         int bound = Integer.parseInt(args[1]);
-        boolean supervisor = args[2] != null ? Boolean.parseBoolean(args[2]) : false;
-        Logger.setSilent(supervisor);
+        boolean silent = args[2] != null ? Boolean.parseBoolean(args[2]) : true;
+        Logger.setSilent(silent);
 
         forkJoinPool = new ForkJoinPool(nThreads);
 
@@ -26,12 +26,21 @@ public class Main {
         Integer[] arr = generateData(r -> r.nextInt(bound), Integer.class, bound);
         forkJoinPool.execute(new Quicksorter<>(arr, 0, arr.length - 1, activeThreadCount, 1));
 
+        Long startTime = System.nanoTime();
         try {
             synchronized (activeThreadCount) {
                 activeThreadCount.wait();
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
+        }
+        Long endTitme = System.nanoTime();
+
+        if (silent) {
+            System.out.println("Thread count: " + nThreads);
+            System.out.println("Sample size: 0..." + bound);
+            System.out.println("Data variation: 0..." + bound);
+            System.out.println("Execution time: " + (endTitme - startTime) / 1000000000. + " seconds");
         }
 
         Boolean isSorted = isSorted(arr);

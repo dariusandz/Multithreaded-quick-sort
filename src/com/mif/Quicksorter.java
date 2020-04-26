@@ -63,9 +63,9 @@ public class Quicksorter<T extends Comparable<T>> implements Runnable {
     }
 
     private boolean shouldNotPartitionIntoThreads() {
-        synchronized (activeThreadCount) {
-            return activeThreadCount.get() + 2 > forkJoinPool.getParallelism();
-        }
+//        synchronized (activeThreadCount) {
+        return activeThreadCount.get() + 2 > forkJoinPool.getParallelism();
+//        }
     }
 
     private int partition(int nLeft, int nRight) {
