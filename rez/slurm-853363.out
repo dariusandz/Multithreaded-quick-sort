@@ -1,0 +1,45 @@
+Thread count: 1
+Sample size: 0...10000000
+Data variation: 0...10000000
+Execution time: 10.164272796 seconds
+Is array sorted? : true
+Thread count: 3
+Sample size: 0...10000000
+Data variation: 0...10000000
+Execution time: 5.940989766 seconds
+Is array sorted? : true
+Thread count: 5
+Sample size: 0...10000000
+Data variation: 0...10000000
+Execution time: 3.472876003 seconds
+Is array sorted? : true
+Thread count: 7
+Sample size: 0...10000000
+Data variation: 0...10000000
+Execution time: 2.697648459 seconds
+Is array sorted? : true
+Thread count: 9
+Sample size: 0...10000000
+Data variation: 0...10000000
+Execution time: 3.467346751 seconds
+Is array sorted? : true
+Thread count: 11
+Sample size: 0...10000000
+Data variation: 0...10000000
+Execution time: 2.451542804 seconds
+Is array sorted? : true
+Thread count: 12
+Sample size: 0...10000000
+Data variation: 0...10000000
+Execution time: 2.940675051 seconds
+Is array sorted? : true
+Thread count: 13
+Sample size: 0...10000000
+Data variation: 0...10000000
+Execution time: 2.992915129 seconds
+Is array sorted? : true
+Thread count: 14
+Sample size: 0...10000000
+Data variation: 0...10000000
+Execution time: 2.668592629 seconds
+Is array sorted? : true

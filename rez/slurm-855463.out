@@ -1,0 +1,144 @@
+arg[0] - number of threads (1...n) 
+ arg[1] - data sample size (1...MAX_INT) 
+ arg[2] - silent mode (false, true)
+Thread count: 1
+Sample size: 0...2000000
+Data variation: 0...2000000
+Execution time: 1.585482051 seconds
+Is array sorted? : true
+arg[0] - number of threads (1...n) 
+ arg[1] - data sample size (1...MAX_INT) 
+ arg[2] - silent mode (false, true)
+Thread count: 2
+Sample size: 0...2000000
+Data variation: 0...2000000
+Execution time: 1.719563586 seconds
+Is array sorted? : true
+arg[0] - number of threads (1...n) 
+ arg[1] - data sample size (1...MAX_INT) 
+ arg[2] - silent mode (false, true)
+Thread count: 4
+Sample size: 0...2000000
+Data variation: 0...2000000
+Execution time: 0.893961594 seconds
+Is array sorted? : true
+arg[0] - number of threads (1...n) 
+ arg[1] - data sample size (1...MAX_INT) 
+ arg[2] - silent mode (false, true)
+Thread count: 6
+Sample size: 0...2000000
+Data variation: 0...2000000
+Execution time: 0.795382678 seconds
+Is array sorted? : true
+arg[0] - number of threads (1...n) 
+ arg[1] - data sample size (1...MAX_INT) 
+ arg[2] - silent mode (false, true)
+Thread count: 8
+Sample size: 0...2000000
+Data variation: 0...2000000
+Execution time: 0.84616971 seconds
+Is array sorted? : true
+arg[0] - number of threads (1...n) 
+ arg[1] - data sample size (1...MAX_INT) 
+ arg[2] - silent mode (false, true)
+Thread count: 10
+Sample size: 0...2000000
+Data variation: 0...2000000
+Execution time: 1.050023121 seconds
+Is array sorted? : true
+arg[0] - number of threads (1...n) 
+ arg[1] - data sample size (1...MAX_INT) 
+ arg[2] - silent mode (false, true)
+Thread count: 1
+Sample size: 0...4000000
+Data variation: 0...4000000
+Execution time: 3.842369731 seconds
+Is array sorted? : true
+arg[0] - number of threads (1...n) 
+ arg[1] - data sample size (1...MAX_INT) 
+ arg[2] - silent mode (false, true)
+Thread count: 2
+Sample size: 0...4000000
+Data variation: 0...4000000
+Execution time: 3.590045319 seconds
+Is array sorted? : true
+arg[0] - number of threads (1...n) 
+ arg[1] - data sample size (1...MAX_INT) 
+ arg[2] - silent mode (false, true)
+Thread count: 4
+Sample size: 0...4000000
+Data variation: 0...4000000
+Execution time: 1.774101856 seconds
+Is array sorted? : true
+arg[0] - number of threads (1...n) 
+ arg[1] - data sample size (1...MAX_INT) 
+ arg[2] - silent mode (false, true)
+Thread count: 6
+Sample size: 0...4000000
+Data variation: 0...4000000
+Execution time: 1.723049745 seconds
+Is array sorted? : true
+arg[0] - number of threads (1...n) 
+ arg[1] - data sample size (1...MAX_INT) 
+ arg[2] - silent mode (false, true)
+Thread count: 8
+Sample size: 0...4000000
+Data variation: 0...4000000
+Execution time: 1.253793392 seconds
+Is array sorted? : true
+arg[0] - number of threads (1...n) 
+ arg[1] - data sample size (1...MAX_INT) 
+ arg[2] - silent mode (false, true)
+Thread count: 10
+Sample size: 0...4000000
+Data variation: 0...4000000
+Execution time: 1.093035212 seconds
+Is array sorted? : true
+arg[0] - number of threads (1...n) 
+ arg[1] - data sample size (1...MAX_INT) 
+ arg[2] - silent mode (false, true)
+Thread count: 1
+Sample size: 0...8000000
+Data variation: 0...8000000
+Execution time: 8.360878305 seconds
+Is array sorted? : true
+arg[0] - number of threads (1...n) 
+ arg[1] - data sample size (1...MAX_INT) 
+ arg[2] - silent mode (false, true)
+Thread count: 2
+Sample size: 0...8000000
+Data variation: 0...8000000
+Execution time: 8.117538376 seconds
+Is array sorted? : true
+arg[0] - number of threads (1...n) 
+ arg[1] - data sample size (1...MAX_INT) 
+ arg[2] - silent mode (false, true)
+Thread count: 4
+Sample size: 0...8000000
+Data variation: 0...8000000
+Execution time: 4.036133425 seconds
+Is array sorted? : true
+arg[0] - number of threads (1...n) 
+ arg[1] - data sample size (1...MAX_INT) 
+ arg[2] - silent mode (false, true)
+Thread count: 6
+Sample size: 0...8000000
+Data variation: 0...8000000
+Execution time: 2.945183059 seconds
+Is array sorted? : true
+arg[0] - number of threads (1...n) 
+ arg[1] - data sample size (1...MAX_INT) 
+ arg[2] - silent mode (false, true)
+Thread count: 8
+Sample size: 0...8000000
+Data variation: 0...8000000
+Execution time: 2.196178889 seconds
+Is array sorted? : true
+arg[0] - number of threads (1...n) 
+ arg[1] - data sample size (1...MAX_INT) 
+ arg[2] - silent mode (false, true)
+Thread count: 10
+Sample size: 0...8000000
+Data variation: 0...8000000
+Execution time: 2.132608435 seconds
+Is array sorted? : true

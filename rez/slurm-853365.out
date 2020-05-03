@@ -1,0 +1,80 @@
+Thread count: 1
+Sample size: 0...1000000
+Data variation: 0...1000000
+Execution time: 0.707857568 seconds
+Is array sorted? : true
+Thread count: 3
+Sample size: 0...1000000
+Data variation: 0...1000000
+Execution time: 0.68374954 seconds
+Is array sorted? : true
+Thread count: 5
+Sample size: 0...1000000
+Data variation: 0...1000000
+Execution time: 0.588746099 seconds
+Is array sorted? : true
+Thread count: 7
+Sample size: 0...1000000
+Data variation: 0...1000000
+Execution time: 0.767139825 seconds
+Is array sorted? : true
+Thread count: 1
+Sample size: 0...2000000
+Data variation: 0...2000000
+Execution time: 1.699898615 seconds
+Is array sorted? : true
+Thread count: 3
+Sample size: 0...2000000
+Data variation: 0...2000000
+Execution time: 1.230052025 seconds
+Is array sorted? : true
+Thread count: 5
+Sample size: 0...2000000
+Data variation: 0...2000000
+Execution time: 1.0895457 seconds
+Is array sorted? : true
+Thread count: 7
+Sample size: 0...2000000
+Data variation: 0...2000000
+Execution time: 0.832255835 seconds
+Is array sorted? : true
+Thread count: 1
+Sample size: 0...4000000
+Data variation: 0...4000000
+Execution time: 3.532272272 seconds
+Is array sorted? : true
+Thread count: 3
+Sample size: 0...4000000
+Data variation: 0...4000000
+Execution time: 2.001073813 seconds
+Is array sorted? : true
+Thread count: 5
+Sample size: 0...4000000
+Data variation: 0...4000000
+Execution time: 1.450716359 seconds
+Is array sorted? : true
+Thread count: 7
+Sample size: 0...4000000
+Data variation: 0...4000000
+Execution time: 1.334877037 seconds
+Is array sorted? : true
+Thread count: 1
+Sample size: 0...8000000
+Data variation: 0...8000000
+Execution time: 8.365995149 seconds
+Is array sorted? : true
+Thread count: 3
+Sample size: 0...8000000
+Data variation: 0...8000000
+Execution time: 4.545662195 seconds
+Is array sorted? : true
+Thread count: 5
+Sample size: 0...8000000
+Data variation: 0...8000000
+Execution time: 3.042311406 seconds
+Is array sorted? : true
+Thread count: 7
+Sample size: 0...8000000
+Data variation: 0...8000000
+Execution time: 2.788175361 seconds
+Is array sorted? : true
